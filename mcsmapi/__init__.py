@@ -1,4 +1,3 @@
-from typing import Literal
 import urllib.parse
 from mcsmapi.pool import ApiPool
 from mcsmapi.apis.file import File
@@ -11,8 +10,6 @@ from mcsmapi.request import Request
 
 
 class MCSMAPI:
-    authentication: Literal["apikey", "account"]
-    """认证类型"""
 
     def __init__(self, url: str, timeout: int = 5) -> None:
         split_url = urllib.parse.urlsplit(url)
