@@ -33,5 +33,3 @@ pip install mcsmapi
 ## 许可
 
 `mcsmapi` 使用 [MIT 许可证](https://opensource.org/licenses/MIT)。
-
-请参阅 [LICENSE](LICENSE) 文件以获取更多信息。

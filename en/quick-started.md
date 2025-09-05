@@ -33,5 +33,3 @@ If you find any issues or have suggestions for improvements, feel free to submit
 ## License
 
 `mcsmapi` is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-Please see the [LICENSE](LICENSE) file for more information.
