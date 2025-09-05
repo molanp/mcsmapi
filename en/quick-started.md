@@ -18,7 +18,7 @@ pip install mcsmapi
 ```
 
 If you need the latest build files, please visit
-[Actions](https://github.com/molanp/mcsmapi/actions)
+[Actions](https://github.com/molanp/mcsmapi/actions/workflows/auto-build.yml)
 
 ## Supported MCSM Versions
 
