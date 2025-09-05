@@ -8,6 +8,7 @@ export const sharedConfig = defineConfig({
   lang: "zh-CN",
   title: "MCSMAPI",
   description: "mcsmapi是一个帮助开发者更好的使用MCSManager的python-SDK",
+  base: "/mcsmapi/",
   head: [
     [
       "meta",
