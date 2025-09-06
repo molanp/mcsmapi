@@ -6,7 +6,7 @@ export const sharedConfig = defineConfig({
   },
   metaChunk: true,
   lang: "zh-CN",
-  title: "MCSMAPI",
+  title: "MCSMAPI | Easy Interfacing with MCSManager",
   description: "mcsmapi是一个帮助开发者更好的使用MCSManager的python-SDK",
   base: "/mcsmapi/",
   head: [
@@ -42,19 +42,7 @@ export const sharedConfig = defineConfig({
     },
     outline: {
       level: [1, 3],
-      label: "目录",
-    },
-
-    lastUpdated: {
-      text: "Updated at",
-      formatOptions: {
-        dateStyle: "full",
-        timeStyle: "medium",
-      },
-    },
-    docFooter: {
-      prev: "Pagina prior",
-      next: "Proxima pagina",
+      label: "Directory",
     },
     socialLinks: [
       { icon: "github", link: "https://github.com/molanp/mcsmapi" },
