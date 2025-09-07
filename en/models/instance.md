@@ -242,12 +242,3 @@ Instance search list.
 | `maxPage`  | int                  | Maximum number of pages      |
 | `data`     | list[InstanceDetail] | List of instance details     |
 | `daemonId` | str                  | Node UUID                    |
-
-## _class_ `UserInstancesList(BaseModel)`
-
-User instance list.
-
-| Field Name     | Type | Description   |
-| -------------- | ---- | ------------- |
-| `instanceUuid` | str  | Instance UUID |
-| `daemonId`     | str  | Node UUID     |

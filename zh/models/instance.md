@@ -242,12 +242,3 @@
 | `maxPage`  | int                  | 最大页数         |
 | `data`     | list[InstanceDetail] | 实例详细信息列表 |
 | `daemonId` | str                  | 所属的节点 UUID  |
-
-## _class_ `UserInstancesList(BaseModel)`
-
-用户实例列表
-
-| 字段名         | 类型 | 描述            |
-| -------------- | ---- | --------------- |
-| `instanceUuid` | str  | 实例 UUID       |
-| `daemonId`     | str  | 所属的节点 UUID |

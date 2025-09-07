@@ -10,6 +10,15 @@
 | `USER`   | 1      | 普通用户权限 |
 | `ADMIN`  | 10     | 管理员权限   |
 
+## _class_ `UserInstances(BaseModel)`
+
+用户实例信息
+
+| 字段名         | 类型 | 描述          |
+| -------------- | ---- | ------------- |
+| `instanceUuid` | str  | 实例 UUID     |
+| `daemonId`     | str  | 所属的节点 ID |
+
 ## _class_ `UserCreateResult(BaseModel)`
 
 用户创建结果
@@ -24,21 +33,21 @@
 
 用户信息模型
 
-| 字段名         | 类型                    | 描述                                 |
-| -------------- | ----------------------- | ------------------------------------ |
-| `uuid`         | str                     | 用户唯一标识符 (UUID)                |
-| `userName`     | str                     | 用户名                               |
-| `permission`   | UserPermission          | 用户权限级别                         |
-| `registerTime` | str                     | 用户注册时间 (YYYY/M/D hh:mm:ss)     |
-| `loginTime`    | str                     | 用户最后登录时间 (YYYY/M/D hh:mm:ss) |
-| `apiKey`       | str                     | 用户 API 密钥                        |
-| `open2FA`      | bool                    | 是否启用双因素认证 (2FA)             |
-| `instances`    | list[UserInstancesList] | 用户关联的实例列表                   |
-| `isInit`       | bool                    | 是否为初始化用户 (已弃用)            |
-| `secret`       | str                     | 用户安全密钥 (已弃用)                |
-| `passWord`     | str                     | 用户密码(已弃用)                     |
-| `passWordType` | int                     | 密码类型 (已弃用)                    |
-| `salt`         | str                     | 密码盐值 (已弃用)                    |
+| 字段名         | 类型                | 描述                                 |
+| -------------- | ------------------- | ------------------------------------ |
+| `uuid`         | str                 | 用户唯一标识符 (UUID)                |
+| `userName`     | str                 | 用户名                               |
+| `permission`   | UserPermission      | 用户权限级别                         |
+| `registerTime` | str                 | 用户注册时间 (YYYY/M/D hh:mm:ss)     |
+| `loginTime`    | str                 | 用户最后登录时间 (YYYY/M/D hh:mm:ss) |
+| `apiKey`       | str                 | 用户 API 密钥                        |
+| `passWord`     | str                 | 用户密码                             |
+| `open2FA`      | bool                | 是否启用双因素认证 (2FA)             |
+| `instances`    | list[UserInstances] | 用户关联的实例列表                   |
+| `isInit`       | bool                | 是否为初始化用户 (已弃用)            |
+| `secret`       | str                 | 用户安全密钥 (已弃用)                |
+| `passWordType` | int                 | 密码类型 (已弃用)                    |
+| `salt`         | str                 | 密码盐值 (已弃用)                    |
 
 ### _method_ `delete(self)`
 
@@ -71,23 +80,3 @@
 | `page_size` | int             | 每页返回的用户数量 |
 | `max_page`  | int             | 最大可用页数       |
 | `data`      | list[UserModel] | 用户信息列表       |
-
-## _class_ `UserConfig(BaseModel)`
-
-用户配置信息
-
-| 字段名         | 类型                 | 描述                      |
-| -------------- | -------------------- | ------------------------- |
-| `uuid`         | str                  | 用户唯一标识符 (UUID)     |
-| `userName`     | str                  | 用户名                    |
-| `loginTime`    | str                  | 最后登录时间              |
-| `registerTime` | str                  | 注册时间                  |
-| `instances`    | list[InstanceDetail] | 用户拥有的实例列表        |
-| `permission`   | int                  | 用户权限级别              |
-| `passWord`     | str                  | 用户密码                  |
-| `open2FA`      | bool                 | 是否启用双因素认证 (2FA)  |
-| `apiKey`       | str                  | 用户 API 密钥             |
-| `passWordType` | int                  | 密码类型 (已弃用)         |
-| `isInit`       | bool                 | 是否为初始化用户 (已弃用) |
-| `secret`       | str                  | 用户安全密钥 (已弃用)     |
-| `salt`         | str                  | 用户密码盐值 (已弃用)     |

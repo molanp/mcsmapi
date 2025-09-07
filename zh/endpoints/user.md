@@ -50,7 +50,7 @@ api = mcsm.user()
 #### 参数
 
 - `uuid`: 用户的 UUID
-- `config`: 新的用户信息，以字典形式提供，缺失内容由 `UserConfig` 模型提供默认值
+- `config`: 新的用户信息，以字典形式提供，缺失内容由 `UserModel` 模型提供默认值
 
 #### 返回
 

@@ -50,7 +50,7 @@ This function is not recommended for direct use. It is suggested to call `search
 #### Parameters
 
 - `uuid`: User's UUID.
-- `config`: New user information, provided as a dictionary. Missing values are filled with default values from the `UserConfig` model.
+- `config`: New user information, provided as a dictionary. Missing values are filled with default values from the `UserModel` model.
 
 #### Returns
 
