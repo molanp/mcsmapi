@@ -44,13 +44,13 @@ api = mcsm.user()
 更新用户信息
 
 ::: warning
-此函数不建议直接使用，建议调用 search 后使用用户对象的 update 方法按需更新
+此函数不建议直接使用，建议调用 `search` 后使用用户对象的 `update` 方法按需更新
 :::
 
 #### 参数
 
 - `uuid`: 用户的 UUID
-- `config`: 新的用户信息，以字典形式提供，缺失内容由 UserConfig 模型提供默认值
+- `config`: 新的用户信息，以字典形式提供，缺失内容由 `UserConfig` 模型提供默认值
 
 #### 返回
 

@@ -4,7 +4,7 @@
 后续的所有操作都默认你已经完成了此项配置
 :::
 
-## `MCSMAPI(url, timeout: int = 5)`
+## _class_ `MCSMAPI(url, timeout: int = 5)`
 
 初始化 MCSMAPI 对象
 

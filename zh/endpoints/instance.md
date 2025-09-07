@@ -47,7 +47,7 @@ api = mcsm.instance()
 #### 参数
 
 - `daemonId`: 节点的 UUID
-- `config`: 新实例的配置，以字典形式提供，缺失内容由 InstanceConfig 模型提供默认值
+- `config`: 新实例的配置，以字典形式提供，缺失内容由 `InstanceConfig` 模型提供默认值
 
 #### 返回
 
@@ -61,7 +61,7 @@ api = mcsm.instance()
 
 - `daemonId`: 节点的 UUID
 - `uuid`: 实例的 UUID
-- `config`: 新的配置，以字典形式提供，缺失内容由 InstanceConfig 模型提供默认值
+- `config`: 新的配置，以字典形式提供，缺失内容由 `InstanceConfig` 模型提供默认值
 
 #### 返回
 

@@ -35,9 +35,13 @@ export const sharedConfig = defineConfig({
     },
   },
   themeConfig: {
+    siteTitle: 'MCSMAPI',
     footer: {
       message: "Released under the MIT License.",
       copyright: `Copyright © 2025 MCSMAPI`,
+    },
+    search: {
+      provider: "local",
     },
     outline: {
       level: [1, 3],

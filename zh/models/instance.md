@@ -6,51 +6,51 @@
 
 | 枚举项 | 枚举值 |
 | ------ | ------ |
-| LF     | 0      |
-| CR     | 1      |
-| CRLF   | 2      |
+| `LF`   | 0      |
+| `CR`   | 1      |
+| `CRLF` | 2      |
 
 ## _class_ `Status(IntEnum)`
 
 实例状态
 
-| 枚举项   | 枚举值 | 描述     |
-| -------- | ------ | -------- |
-| BUSY     | -1     | 维护中   |
-| STOP     | 0      | 未运行   |
-| STOPPING | 1      | 停止中   |
-| STARTING | 2      | 启动中   |
-| RUNNING  | 3      | 正在运行 |
+| 枚举项     | 枚举值 | 描述     |
+| ---------- | ------ | -------- |
+| `BUSY`     | -1     | 维护中   |
+| `STOP`     | 0      | 未运行   |
+| `STOPPING` | 1      | 停止中   |
+| `STARTING` | 2      | 启动中   |
+| `RUNNING`  | 3      | 正在运行 |
 
 ## _class_ `batchOperationDetail(TypedDict)`
 
 批量操作的实例信息
 
-| 字段名   | 类型 | 描述      |
-| -------- | ---- | --------- |
-| uuid     | str  | 实例 UUID |
-| daemonId | str  | 节点 UUID |
+| 字段名     | 类型 | 描述      |
+| ---------- | ---- | --------- |
+| `uuid`     | str  | 实例 UUID |
+| `daemonId` | str  | 节点 UUID |
 
 ## _class_ `TerminalOption(BaseModel)`
 
 终端选项
 
-| 字段名       | 类型 | 描述                 |
-| ------------ | ---- | -------------------- |
-| haveColor    | bool | 是否启用前端颜色渲染 |
-| pty          | bool | 是否使用伪终端(PTY)  |
-| ptyWindowCol | int  | PTY 窗口列数         |
-| ptyWindowRow | int  | PTY 窗口行数         |
+| 字段名         | 类型 | 描述                 |
+| -------------- | ---- | -------------------- |
+| `haveColor`    | bool | 是否启用前端颜色渲染 |
+| `pty`          | bool | 是否使用伪终端(PTY)  |
+| `ptyWindowCol` | int  | PTY 窗口列数         |
+| `ptyWindowRow` | int  | PTY 窗口行数         |
 
 ## _class_ `EventTask(BaseModel)`
 
 事件任务
 
-| 字段名      | 类型 | 描述           |
-| ----------- | ---- | -------------- |
-| autoStart   | bool | 是否自动启动   |
-| autoRestart | bool | 是否自动重启   |
-| ignore      | bool | 是否忽略该任务 |
+| 字段名        | 类型 | 描述           |
+| ------------- | ---- | -------------- |
+| `autoStart`   | bool | 是否自动启动   |
+| `autoRestart` | bool | 是否自动重启   |
+| `ignore`      | bool | 是否忽略该任务 |
 
 ## _class_ `PingConfig(BaseModel)`
 
@@ -58,82 +58,53 @@
 
 | 字段名 | 类型 | 描述                       |
 | ------ | ---- | -------------------------- |
-| ip     | str  | 服务器 IP 地址             |
-| port   | int  | 服务器端口                 |
-| type   | int  | Ping 类型 (0: UDP, 1: TCP) |
+| `ip`   | str  | 服务器 IP 地址             |
+| `port` | int  | 服务器端口                 |
+| `type` | int  | Ping 类型 (0: UDP, 1: TCP) |
 
 ## _class_ `InstanceConfig(BaseModel)`
 
 实例配置信息
 
-| 字段名            | 类型           | 描述                                               |
-| ----------------- | -------------- | -------------------------------------------------- |
-| nickname          | str            | 实例名称                                           |
-| startCommand      | str            | 启动命令                                           |
-| stopCommand       | str            | 停止命令                                           |
-| cwd               | str            | 工作目录                                           |
-| ie                | str            | 输入编码                                           |
-| oe                | str            | 输出编码                                           |
-| createDatetime    | int            | 创建时间 (Unix 时间戳)                             |
-| lastDatetime      | int            | 最后修改时间 (Unix 时间戳)                         |
-| type              | str            | 实例类型 (universal, minecraft 等)                 |
-| tag               | list[str]      | 实例标签                                           |
-| endTime           | int \| None    | 实例到期时间                                       |
-| fileCode          | str            | 文件编码                                           |
-| processType       | str            | 进程类型 (如 docker, general)                      |
-| updateCommand     | str            | 更新命令                                           |
-| actionCommandList | list[str]      | 实例可执行的操作命令列表                           |
-| crlf              | CRLFType       | 换行符                                             |
-| docker            | DockerConfig   | Docker 相关配置                                    |
-| enableRcon        | bool           | 是否启用 RCON 远程控制                             |
-| rconPassword      | str            | RCON 连接密码                                      |
-| rconPort          | int            | RCON 端口                                          |
-| rconIp            | str            | RCON IP 地址                                       |
-| terminalOption    | TerminalOption | 终端选项配置                                       |
-| eventTask         | EventTask      | 事件任务配置                                       |
-| pingConfig        | PingConfig     | 服务器 Ping 监测配置(已弃用)                       |
-| runAs             | str            | 运行该实例的系统用户，为空则使用启动面板的系统用户 |
-
-## _class_ `InstanceProcessInfo(BaseModel)`
-
-进程信息
-
-| 字段名    | 类型 | 描述                       |
-| --------- | ---- | -------------------------- |
-| cpu       | int  | CPU 使用率 (单位: %)       |
-| memory    | int  | 进程占用内存 (单位: KB)    |
-| ppid      | int  | 父进程 ID                  |
-| pid       | int  | 进程 ID                    |
-| ctime     | int  | 进程创建时间 (Unix 时间戳) |
-| elapsed   | int  | 进程运行时长 (单位: 秒)    |
-| timestamp | int  | 时间戳                     |
-
-## _class_ `InstanceInfo(BaseModel)`
-
-实例运行状态信息(这些选项在新版中已不再支持设置，但仍在 API 中返回)
-
-| 字段名         | 类型       | 描述                         |
-| -------------- | ---------- | ---------------------------- |
-| currentPlayers | int        | 当前玩家数量                 |
-| fileLock       | int        | 文件锁状态 (0: 无锁)         |
-| maxPlayers     | int        | 最大允许玩家数 (-1 表示未知) |
-| openFrpStatus  | bool       | 是否启用 FRP 远程服务        |
-| playersChart   | list[dict] | 玩家数量变化图表数据         |
-| version        | str        | 服务器版本                   |
+| 字段名              | 类型           | 描述                                               |
+| ------------------- | -------------- | -------------------------------------------------- |
+| `nickname`          | str            | 实例名称                                           |
+| `startCommand`      | str            | 启动命令                                           |
+| `stopCommand`       | str            | 停止命令                                           |
+| `cwd`               | str            | 工作目录                                           |
+| `ie`                | str            | 输入编码                                           |
+| `oe`                | str            | 输出编码                                           |
+| `createDatetime`    | int            | 创建时间 (Unix 时间戳)                             |
+| `lastDatetime`      | int            | 最后修改时间 (Unix 时间戳)                         |
+| `type`              | str            | 实例类型 (universal, minecraft 等)                 |
+| `tag`               | list[str]      | 实例标签                                           |
+| `endTime`           | int \| None    | 实例到期时间                                       |
+| `fileCode`          | str            | 文件编码                                           |
+| `processType`       | str            | 进程类型 (如 docker, general)                      |
+| `updateCommand`     | str            | 更新命令                                           |
+| `actionCommandList` | list[str]      | 实例可执行的操作命令列表                           |
+| `crlf`              | CRLFType       | 换行符                                             |
+| `docker`            | DockerConfig   | Docker 相关配置                                    |
+| `enableRcon`        | bool           | 是否启用 RCON 远程控制                             |
+| `rconPassword`      | str            | RCON 连接密码                                      |
+| `rconPort`          | int            | RCON 端口                                          |
+| `rconIp`            | str            | RCON IP 地址                                       |
+| `terminalOption`    | TerminalOption | 终端选项配置                                       |
+| `eventTask`         | EventTask      | 事件任务配置                                       |
+| `pingConfig`        | PingConfig     | 服务器 Ping 监测配置(已弃用)                       |
+| `runAs`             | str            | 运行该实例的系统用户，为空则使用启动面板的系统用户 |
 
 ## _class_ `InstanceDetail(BaseModel)`
 
 实例详细信息
 
-| 字段名       | 类型                | 描述               |
-| ------------ | ------------------- | ------------------ |
-| config       | InstanceConfig      | 实例的配置信息     |
-| info         | InstanceInfo        | 实例的运行状态信息 |
-| daemonId     | str                 | 所属的节点 UUID    |
-| instanceUuid | str                 | 实例 UUID          |
-| processInfo  | InstanceProcessInfo | 实例的进程信息     |
-| started      | int                 | 实例的启动次数     |
-| status       | Status              | 实例状态           |
+| 字段名         | 类型           | 描述            |
+| -------------- | -------------- | --------------- |
+| `config`       | InstanceConfig | 实例的配置信息  |
+| `daemonId`     | str            | 所属的节点 UUID |
+| `instanceUuid` | str            | 实例 UUID       |
+| `started`      | int            | 实例的启动次数  |
+| `status`       | Status         | 实例状态        |
 
 ### _method_ `start(self)`
 
@@ -256,27 +227,27 @@
 
 实例创建结果
 
-| 字段名       | 类型           | 描述           |
-| ------------ | -------------- | -------------- |
-| instanceUuid | str            | 实例 UUID      |
-| config       | InstanceConfig | 实例的配置信息 |
+| 字段名         | 类型           | 描述           |
+| -------------- | -------------- | -------------- |
+| `instanceUuid` | str            | 实例 UUID      |
+| `config`       | InstanceConfig | 实例的配置信息 |
 
 ## _class_ `InstanceSearchList(BaseModel)`
 
 实例搜索列表
 
-| 字段名   | 类型                 | 描述             |
-| -------- | -------------------- | ---------------- |
-| pageSize | int                  | 每页的实例数量   |
-| maxPage  | int                  | 最大页数         |
-| data     | list[InstanceDetail] | 实例详细信息列表 |
-| daemonId | str                  | 所属的节点 UUID  |
+| 字段名     | 类型                 | 描述             |
+| ---------- | -------------------- | ---------------- |
+| `pageSize` | int                  | 每页的实例数量   |
+| `maxPage`  | int                  | 最大页数         |
+| `data`     | list[InstanceDetail] | 实例详细信息列表 |
+| `daemonId` | str                  | 所属的节点 UUID  |
 
 ## _class_ `UserInstancesList(BaseModel)`
 
 用户实例列表
 
-| 字段名       | 类型 | 描述            |
-| ------------ | ---- | --------------- |
-| instanceUuid | str  | 实例 UUID       |
-| daemonId     | str  | 所属的节点 UUID |
+| 字段名         | 类型 | 描述            |
+| -------------- | ---- | --------------- |
+| `instanceUuid` | str  | 实例 UUID       |
+| `daemonId`     | str  | 所属的节点 UUID |

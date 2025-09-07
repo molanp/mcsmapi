@@ -1,4 +1,4 @@
-# MCSM API
+# 快速开始
 
 ![Supported MCSManager Versions](https://img.shields.io/badge/Supported%20MCSManager%20Versions-10.x-blue)
 ![Python Version](https://img.shields.io/badge/Python%20Version-%3E%3D3.10-blue)

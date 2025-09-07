@@ -5,7 +5,7 @@
 All subsequent operations assume you have completed this configuration.
 :::
 
-## `MCSMAPI(url, timeout: int = 5)`
+## _class_ `MCSMAPI(url, timeout: int = 5)`
 
 Initialize the MCSMAPI object.
 
