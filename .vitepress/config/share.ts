@@ -5,6 +5,9 @@ export const sharedConfig = defineConfig({
     "zh/:rest*": ":rest*",
   },
   metaChunk: true,
+  sitemap: {
+    hostname: "https://mcsmapi.awkchan.top",
+  },
   lang: "zh-CN",
   title: "MCSMAPI | Easy Interfacing with MCSManager",
   description: "mcsmapi是一个帮助开发者更好的使用MCSManager的python-SDK",
@@ -35,7 +38,7 @@ export const sharedConfig = defineConfig({
     },
   },
   themeConfig: {
-    siteTitle: 'MCSMAPI',
+    siteTitle: "MCSMAPI",
     footer: {
       message: "Released under the MIT License.",
       copyright: `Copyright © 2025 MCSMAPI`,
