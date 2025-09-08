@@ -1,6 +1,6 @@
-# 仪表盘操作相关模型
+## 仪表盘操作相关模型
 
-## _class_ `SystemUser(BaseModel)`
+### _class_ `SystemUser(BaseModel)`
 
 系统用户信息
 
@@ -12,7 +12,7 @@
 | `homedir`  | str         | 用户主目录        |
 | `shell`    | str \| None | 默认 Shell 解释器 |
 
-## _class_ `SystemInfo(BaseModel)`
+### _class_ `SystemInfo(BaseModel)`
 
 系统基本信息
 
@@ -32,7 +32,7 @@
 | `uptime`   | float                      | 系统运行时间 (单位: 秒)             |
 | `cpu`      | float                      | CPU 当前使用率 (单位: %)            |
 
-## _class_ `RecordInfo(BaseModel)`
+### _class_ `RecordInfo(BaseModel)`
 
 安全记录信息
 
@@ -43,7 +43,7 @@
 | `banips`        | int  | 被封禁的 IP 数量 |
 | `loginFailed`   | int  | 登录失败次数     |
 
-## _class_ `RequestChart(BaseModel)`
+### _class_ `RequestChart(BaseModel)`
 
 应用实例运行和接口请求量趋势
 
@@ -53,7 +53,7 @@
 | `totalInstance`   | int  | 总实例数量     |
 | `runningInstance` | int  | 运行中实例数量 |
 
-## _class_ `ChartInfo(BaseModel)`
+### _class_ `ChartInfo(BaseModel)`
 
 图表数据信息
 
@@ -62,7 +62,7 @@
 | `system`  | list[CpuMemChart]  | 系统资源使用趋势             |
 | `request` | list[RequestChart] | 应用实例运行和接口请求量趋势 |
 
-## _class_ `RemoteCountInfo(BaseModel)`
+### _class_ `RemoteCountInfo(BaseModel)`
 
 远程节点数量统计信息
 
@@ -71,7 +71,7 @@
 | `total`     | int  | 远程节点总数       |
 | `available` | int  | 可用的远程节点数量 |
 
-## _class_ `OverviewModel(BaseModel)`
+### _class_ `OverviewModel(BaseModel)`
 
 系统概览信息
 
@@ -86,9 +86,9 @@
 | `remoteCount`            | RemoteCountInfo   | 远程节点数量统计信息   |
 | `remote`                 | list[DaemonModel] | 远程节点详细信息       |
 
-# 日志操作相关
+### 日志操作相关
 
-## _class_ `LogType(Enum)`
+### _class_ `LogType(Enum)`
 
 日志操作类型
 
@@ -117,7 +117,7 @@
 | `INSTANCE_STOP`          | instance_stop          | 停止实例         |
 | `INSTANCE_START`         | instance_start         | 启动实例         |
 
-## _class_ `LogDetail(BaseModel)`
+### _class_ `LogDetail(BaseModel)`
 
 操作日志详情
 

@@ -1,60 +1,59 @@
-
-# Initializing the MCSMAPI Object
+## Initializing the MCSMAPI Object
 
 ::: tip
 All subsequent operations assume you have completed this configuration.
 :::
 
-## _class_ `MCSMAPI(url, timeout: int = 5)`
+### _class_ `MCSMAPI(url, timeout: int = 5)`
 
 Initialize the MCSMAPI object.
 
-### Parameters
+#### Parameters
 
 - `url`: The URL of the MCSM frontend (including the protocol).
 - `timeout`: Request timeout in seconds, defaults to 5.
 
-### Example
+#### Example
 
 ```py
 from mcsmapi import MCSMAPI
 mcsm = MCSMAPI("http://127.0.0.1:8080")
 ```
 
-# Authentication
+## Authentication
 
 Most APIs require authentication to be used.
 
-## Password Login
+### Password Login
 
-### _method_ `login(username: str, password: str)`
+#### _method_ `login(username: str, password: str)`
 
-### Parameters
+##### Parameters
 
 - `username`: Your username.
 - `password`: Your password.
 
-### Example
+##### Example
 
 ```py
 mcsm.login("username", "password")
 ```
 
-## API Key Login
+### API Key Login
 
-### _method_ `login_with_apikey(apikey: str)`
+#### _method_ `login_with_apikey(apikey: str)`
 
-### Parameters
+##### Parameters
 
 - `apikey`: Your API key.
 
-### Example
+##### Example
 
 ```py
 mcsm.login_with_apikey("apikey")
 ```
 
-# Quick Operations Guide
+## Quick Operations Guide
 
 Every interface within the `MCSMAPI` object can be called directly from its corresponding model.
 
