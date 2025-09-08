@@ -25,7 +25,7 @@ export const sharedConfig = defineConfig({
       {
         name: "keywords",
         content:
-          "MCSManager,MCSMAPI,MCSM,MCSM-API,MCSM-API-Python,MCSM-API-Python-SDK",
+          "MCSManager,MCSMAPI,MCSM-SDK",
       },
     ],
   ],
