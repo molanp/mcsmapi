@@ -45,7 +45,7 @@ overview = api.overview()
 print("服务端版本:", overview.version)
 print("系统内存剩余:", overview.system.freemem)
 print("系统负载平均值:", overview.system.loadavg)
-print("MC-SMA 运行 CPU 占用率:", overview.process.cpu)
+print("MCSM 运行 CPU 占用率:", overview.process.cpu)
 ```
 
 ### 遍历所有远程守护进程

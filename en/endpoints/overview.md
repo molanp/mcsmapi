@@ -45,7 +45,7 @@ overview = api.overview()
 print("Server version:", overview.version)
 print("System memory remaining:", overview.system.freemem)
 print("System load average:", overview.system.loadavg)
-print("MC-SMA CPU usage:", overview.process.cpu)
+print("MCSM CPU usage:", overview.process.cpu)
 ```
 
 ### Iterate through all remote daemons
