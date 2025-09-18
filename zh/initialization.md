@@ -1,19 +1,19 @@
-## 初始化 MCSMAPI 对象
+# 初始化 MCSMAPI 对象
 
 ::: tip
 后续的所有操作都默认你已经完成了此项配置
 :::
 
-### _class_ `MCSMAPI(url, timeout: int = 5)`
+## _class_ `MCSMAPI(url, timeout: int = 5)`
 
 初始化 MCSMAPI 对象
 
-#### 参数
+### 参数
 
 - `url`: MCSM 前端地址的 URL(包含协议头)
 - `timeout`: 请求超时时间，默认为 5 秒
 
-#### 例子
+### 例子
 
 ```py
 from mcsmapi import MCSMAPI

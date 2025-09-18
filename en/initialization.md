@@ -1,19 +1,19 @@
-## Initializing the MCSMAPI Object
+# Initializing the MCSMAPI Object
 
 ::: tip
 All subsequent operations assume you have completed this configuration.
 :::
 
-### _class_ `MCSMAPI(url, timeout: int = 5)`
+## _class_ `MCSMAPI(url, timeout: int = 5)`
 
 Initialize the MCSMAPI object.
 
-#### Parameters
+### Parameters
 
 - `url`: The URL of the MCSM frontend (including the protocol).
 - `timeout`: Request timeout in seconds, defaults to 5.
 
-#### Example
+### Example
 
 ```py
 from mcsmapi import MCSMAPI

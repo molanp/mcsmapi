@@ -1,6 +1,6 @@
-## Dashboard Operation Related Models
+# Dashboard Operation Related Models
 
-### _class_ `SystemUser(BaseModel)`
+## _class_ `SystemUser(BaseModel)`
 
 System user information.
 
@@ -12,7 +12,7 @@ System user information.
 | `homedir`  | str         | User home directory       |
 | `shell`    | str \| None | Default shell interpreter |
 
-### _class_ `SystemInfo(BaseModel)`
+## _class_ `SystemInfo(BaseModel)`
 
 System basic information.
 
@@ -32,7 +32,7 @@ System basic information.
 | `uptime`   | float                      | System uptime (unit: seconds)               |
 | `cpu`      | float                      | Current CPU usage rate (unit: %)            |
 
-### _class_ `RecordInfo(BaseModel)`
+## _class_ `RecordInfo(BaseModel)`
 
 Security record information.
 
@@ -43,7 +43,7 @@ Security record information.
 | `banips`        | int  | Number of banned IP addresses     |
 | `loginFailed`   | int  | Number of failed login attempts   |
 
-### _class_ `RequestChart(BaseModel)`
+## _class_ `RequestChart(BaseModel)`
 
 Application instance operation and API request volume trends.
 
@@ -53,7 +53,7 @@ Application instance operation and API request volume trends.
 | `totalInstance`   | int  | Total number of instances   |
 | `runningInstance` | int  | Number of running instances |
 
-### _class_ `ChartInfo(BaseModel)`
+## _class_ `ChartInfo(BaseModel)`
 
 Chart data information.
 
@@ -62,7 +62,7 @@ Chart data information.
 | `system`   | list[CpuMemChart]  | Trends of system resource usage                                 |
 | `request`  | list[RequestChart] | Trends of application instance operation and API request volume |
 
-### _class_ `RemoteCountInfo(BaseModel)`
+## _class_ `RemoteCountInfo(BaseModel)`
 
 Remote node count statistics information.
 
