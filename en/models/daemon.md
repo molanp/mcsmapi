@@ -1,4 +1,4 @@
-# Node Operation Related Models
+# Node Models
 
 ## _class_ `SystemInfo(BaseModel)`
 

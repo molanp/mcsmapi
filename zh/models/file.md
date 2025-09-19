@@ -1,4 +1,4 @@
-# 文件操作相关模型
+# 文件模型
 
 ## _class_ `FileType(IntEnum)`
 

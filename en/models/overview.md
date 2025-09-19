@@ -1,4 +1,4 @@
-# Dashboard Operation Related Models
+# Dashboard Models
 
 ## _class_ `SystemUser(BaseModel)`
 
@@ -71,9 +71,7 @@ Remote node count statistics information.
 | `total`     | int  | Total number of remote nodes     |
 | `available` | int  | Number of available remote nodes |
 
-## Dashboard Operation Related Models
-
-### _class_ `OverviewModel(BaseModel)`
+## _class_ `OverviewModel(BaseModel)`
 
 System overview information.
 
@@ -88,7 +86,7 @@ System overview information.
 | `remoteCount`            | RemoteCountInfo   | Remote node count statistics information  |
 | `remote`                 | list[DaemonModel] | Remote node detailed information          |
 
-## Log Operation Related
+## Log Models
 
 ### _class_ `LogType(Enum)`
 

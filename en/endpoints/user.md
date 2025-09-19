@@ -1,4 +1,4 @@
-# User Operations
+# User
 
 ## _class_ `User`
 

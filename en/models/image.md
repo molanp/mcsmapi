@@ -1,4 +1,4 @@
-# Image Operation Related Models
+# Image Models
 
 ::: tip
 For detailed definitions, refer to:

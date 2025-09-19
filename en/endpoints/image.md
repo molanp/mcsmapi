@@ -1,4 +1,4 @@
-# Image Operations
+# Image
 
 ## _class_ `Image`
 

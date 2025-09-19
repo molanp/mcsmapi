@@ -1,4 +1,4 @@
-# 节点操作相关模型
+# 节点模型
 
 ## _class_ `SystemInfo(BaseModel)`
 

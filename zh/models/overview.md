@@ -1,4 +1,4 @@
-# 仪表盘操作相关模型
+# 仪表盘模型
 
 ## _class_ `SystemUser(BaseModel)`
 
@@ -86,7 +86,7 @@
 | `remoteCount`            | RemoteCountInfo   | 远程节点数量统计信息   |
 | `remote`                 | list[DaemonModel] | 远程节点详细信息       |
 
-## 日志操作相关
+## 日志模型
 
 ### _class_ `LogType(Enum)`
 

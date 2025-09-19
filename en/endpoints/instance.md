@@ -1,4 +1,4 @@
-# Example Operations
+# Instance
 
 ## _class_ `Instance`
 

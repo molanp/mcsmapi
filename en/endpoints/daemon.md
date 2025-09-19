@@ -1,4 +1,4 @@
-# Node Operations
+# Node
 
 ## _class_ `Daemon`
 

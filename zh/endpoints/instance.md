@@ -1,4 +1,4 @@
-# 实例操作
+# 实例
 
 ## _class_ `Instance`
 
