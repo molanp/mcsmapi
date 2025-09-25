@@ -18,5 +18,4 @@ hero:
 features:
   - title: Simple to Use
     details: Supports action chain operations
-  - title:
 ---

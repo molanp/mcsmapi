@@ -18,6 +18,5 @@ hero:
 features:
   - title: 操作简单
     details: 支持动作链操作
-  - title:
 ---
 
