@@ -66,34 +66,34 @@ Server ping configuration (deprecated).
 
 Instance configuration information.
 
-| Field Name          | Type           | Description                                                                                                                                |
-| ------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `nickname`          | str            | Instance name                                                                                                                              |
-| `startCommand`      | str            | Start command                                                                                                                              |
-| `stopCommand`       | str            | Stop command                                                                                                                               |
-| `cwd`               | str            | Working directory                                                                                                                          |
-| `ie`                | str            | Input encoding                                                                                                                             |
-| `oe`                | str            | Output encoding                                                                                                                            |
-| `createDatetime`    | int            | Creation time (Unix timestamp)                                                                                                             |
-| `lastDatetime`      | int            | Last modification time (Unix timestamp)                                                                                                    |
-| `type`              | str            | Instance type (e.g., universal, minecraft)                                                                                                 |
-| `tag`               | list[str]      | Instance tags                                                                                                                              |
-| `endTime`           | int \| None    | Instance expiration time                                                                                                                   |
-| `fileCode`          | str            | File encoding                                                                                                                              |
-| `processType`       | str            | Process type (e.g., docker, general)                                                                                                       |
-| `updateCommand`     | str            | Update command                                                                                                                             |
-| `actionCommandList` | list[str]      | List of executable commands for the instance                                                                                               |
-| `crlf`              | CRLFType       | Line break type                                                                                                                            |
-| `docker`            | DockerConfig   | Docker-related configuration                                                                                                               |
-| `enableRcon`        | bool           | Enable RCON remote control                                                                                                                 |
-| `rconPassword`      | str            | RCON connection password                                                                                                                   |
-| `rconPort`          | int            | RCON port                                                                                                                                  |
-| `rconIp`            | str            | RCON IP address                                                                                                                            |
-| `terminalOption`    | TerminalOption | Terminal option configuration                                                                                                              |
-| `eventTask`         | EventTask      | Event task configuration                                                                                                                   |
-| `pingConfig`        | PingConfig     | Server ping monitoring configuration (deprecated)                                                                                          |
-| `runAs`             | str            | System user to run the instance, empty to use the panel's system user                                                                      |
-| `basePort`          | int            | The allocated starting port. This number corresponds to a specific variable, and each newly added instance will be assigned incrementally. |
+| Field Name          | Type           | Description                                                                                                                             |
+| ------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `nickname`          | str            | Instance name                                                                                                                           |
+| `startCommand`      | str            | Start command                                                                                                                           |
+| `stopCommand`       | str            | Stop command                                                                                                                            |
+| `cwd`               | str            | Working directory                                                                                                                       |
+| `ie`                | str            | Input encoding                                                                                                                          |
+| `oe`                | str            | Output encoding                                                                                                                         |
+| `createDatetime`    | int            | Creation time (Unix timestamp)                                                                                                          |
+| `lastDatetime`      | int            | Last modification time (Unix timestamp)                                                                                                 |
+| `type`              | str            | Instance type (e.g., universal, minecraft)                                                                                              |
+| `tag`               | list[str]      | Instance tags                                                                                                                           |
+| `endTime`           | int \| None    | Instance expiration time                                                                                                                |
+| `fileCode`          | str            | File encoding                                                                                                                           |
+| `processType`       | str            | Process type (e.g., docker, general)                                                                                                    |
+| `updateCommand`     | str            | Update command                                                                                                                          |
+| `actionCommandList` | list[str]      | List of executable commands for the instance                                                                                            |
+| `crlf`              | CRLFType       | Line break type                                                                                                                         |
+| `docker`            | DockerConfig   | Docker-related configuration                                                                                                            |
+| `enableRcon`        | bool           | Enable RCON remote control                                                                                                              |
+| `rconPassword`      | str            | RCON connection password                                                                                                                |
+| `rconPort`          | int            | RCON port                                                                                                                               |
+| `rconIp`            | str            | RCON IP address                                                                                                                         |
+| `terminalOption`    | TerminalOption | Terminal option configuration                                                                                                           |
+| `eventTask`         | EventTask      | Event task configuration                                                                                                                |
+| `pingConfig`        | PingConfig     | Server ping monitoring configuration (deprecated)                                                                                       |
+| `runAs`             | str            | System user to run the instance, empty to use the panel's system user                                                                   |
+| `basePort`          | int            | The allocated starting port; this number corresponds to the variable from  to , and each new instance will be incrementally assigned. |
 
 ## _class_ `InstanceDetail(BaseModel)`
 
