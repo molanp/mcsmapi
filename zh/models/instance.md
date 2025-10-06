@@ -66,33 +66,34 @@
 
 实例配置信息
 
-| 字段名              | 类型           | 描述                                               |
-| ------------------- | -------------- | -------------------------------------------------- |
-| `nickname`          | str            | 实例名称                                           |
-| `startCommand`      | str            | 启动命令                                           |
-| `stopCommand`       | str            | 停止命令                                           |
-| `cwd`               | str            | 工作目录                                           |
-| `ie`                | str            | 输入编码                                           |
-| `oe`                | str            | 输出编码                                           |
-| `createDatetime`    | int            | 创建时间 (Unix 时间戳)                             |
-| `lastDatetime`      | int            | 最后修改时间 (Unix 时间戳)                         |
-| `type`              | str            | 实例类型 (universal, minecraft 等)                 |
-| `tag`               | list[str]      | 实例标签                                           |
-| `endTime`           | int \| None    | 实例到期时间                                       |
-| `fileCode`          | str            | 文件编码                                           |
-| `processType`       | str            | 进程类型 (如 docker, general)                      |
-| `updateCommand`     | str            | 更新命令                                           |
-| `actionCommandList` | list[str]      | 实例可执行的操作命令列表                           |
-| `crlf`              | CRLFType       | 换行符                                             |
-| `docker`            | DockerConfig   | Docker 相关配置                                    |
-| `enableRcon`        | bool           | 是否启用 RCON 远程控制                             |
-| `rconPassword`      | str            | RCON 连接密码                                      |
-| `rconPort`          | int            | RCON 端口                                          |
-| `rconIp`            | str            | RCON IP 地址                                       |
-| `terminalOption`    | TerminalOption | 终端选项配置                                       |
-| `eventTask`         | EventTask      | 事件任务配置                                       |
-| `pingConfig`        | PingConfig     | 服务器 Ping 监测配置(已弃用)                       |
-| `runAs`             | str            | 运行该实例的系统用户，为空则使用启动面板的系统用户 |
+| 字段名              | 类型           | 描述                                                             |
+| ------------------- | -------------- | ---------------------------------------------------------------- |
+| `nickname`          | str            | 实例名称                                                         |
+| `startCommand`      | str            | 启动命令                                                         |
+| `stopCommand`       | str            | 停止命令                                                         |
+| `cwd`               | str            | 工作目录                                                         |
+| `ie`                | str            | 输入编码                                                         |
+| `oe`                | str            | 输出编码                                                         |
+| `createDatetime`    | int            | 创建时间 (Unix 时间戳)                                           |
+| `lastDatetime`      | int            | 最后修改时间 (Unix 时间戳)                                       |
+| `type`              | str            | 实例类型 (universal, minecraft 等)                               |
+| `tag`               | list[str]      | 实例标签                                                         |
+| `endTime`           | int \| None    | 实例到期时间                                                     |
+| `fileCode`          | str            | 文件编码                                                         |
+| `processType`       | str            | 进程类型 (如 docker, general)                                    |
+| `updateCommand`     | str            | 更新命令                                                         |
+| `actionCommandList` | list[str]      | 实例可执行的操作命令列表                                         |
+| `crlf`              | CRLFType       | 换行符                                                           |
+| `docker`            | DockerConfig   | Docker 相关配置                                                  |
+| `enableRcon`        | bool           | 是否启用 RCON 远程控制                                           |
+| `rconPassword`      | str            | RCON 连接密码                                                    |
+| `rconPort`          | int            | RCON 端口                                                        |
+| `rconIp`            | str            | RCON IP 地址                                                     |
+| `terminalOption`    | TerminalOption | 终端选项配置                                                     |
+| `eventTask`         | EventTask      | 事件任务配置                                                     |
+| `pingConfig`        | PingConfig     | 服务器 Ping 监测配置(已弃用)                                     |
+| `runAs`             | str            | 运行该实例的系统用户，为空则使用启动面板的系统用户               |
+| `basePort`          | int            | 分配的起始端口，这个数字对应 到 的变量，每次新增实例都会递增分配 |
 
 ## _class_ `InstanceDetail(BaseModel)`
 
