@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "MCSMAPI"
-  text: "mcsmapi是一个帮助开发者更好的使用MCSManager的python-SDK"
+  text: "一个帮助开发者更好的使用MCSM的py-SDK"
   tagline: 轻量 易用
   actions:
     - theme: brand
