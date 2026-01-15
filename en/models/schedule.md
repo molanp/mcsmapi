@@ -1,4 +1,4 @@
-## Scheduled Task Model
+# Scheduled Task Model
 
 ## _class_ `ScheduleActionType(Enum)`
 
