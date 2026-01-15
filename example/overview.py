@@ -7,7 +7,7 @@ mcsm.login("admin", "547cABC9bf88@")
 # mcsm.login_with_apikey("apikey")
 
 # Get dashboard data
-overview = mcsm.overview()
+overview = mcsm.overview
 overview_data = overview.overview()
 
 mcsm_version = overview_data.version
