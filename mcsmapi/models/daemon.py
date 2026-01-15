@@ -136,30 +136,30 @@ class DaemonConfig(BaseModel):
 
 
 class DaemonSystemInfo(DaemonOperation):
-    """节点系统信息"""
+    """节点信息"""
 
-    version: str
-    """远程节点版本"""
-    process: ProcessInfo
-    """远程节点的基本信息"""
-    instance: InstanceStat
-    """远程节点实例基本信息"""
-    system: SystemInfo
-    """远程节点系统信息"""
-    cpuMemChart: list[CpuMemChart]
+    version: str | None = None
+    """节点版本"""
+    process: ProcessInfo | None = None
+    """节点进程信息"""
+    instance: InstanceStat | None = None
+    """节点实例统计信息"""
+    system: SystemInfo | None = None
+    """节点系统信息"""
+    cpuMemChart: list[CpuMemChart] | None = None
     """cpu和内存使用趋势"""
-    config: DaemonSetting
-    """节点系统配置信息"""
+    config: DaemonSetting | None = None
+    """节点配置信息"""
     available: bool
     """节点可用状态"""
     ip: str
-    """远程节点的ip"""
+    """节点ip"""
     port: int
-    """远程节点的端口"""
+    """节点端口"""
     prefix: str
-    """远程节点的路径前缀"""
+    """节点路径前缀"""
     remarks: str
-    """远程节点的备注"""
+    """节点备注"""
 
 
 class DaemonStatus(DaemonOperation):

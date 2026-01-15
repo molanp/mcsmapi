@@ -40,10 +40,12 @@ class Schedule:
         )
 
     @staticmethod
-    def create(config: SchedulePostBody) -> bool:
+    def create(daemonId: str, uuid: str, config: SchedulePostBody) -> bool:
         """
         创建计划任务
 
+        :param daemonId: 节点ID
+        :param uuid: 实例ID
         :param config: 计划任务配置
 
         :returns: 是否成功
@@ -51,14 +53,17 @@ class Schedule:
         return send(
             "POST",
             f"{ApiPool.SCHEDULE}",
+            params={"daemonId": daemonId, "uuid": uuid},
             data=config.model_dump(),
         )
 
     @staticmethod
-    def update(config: SchedulePostBody) -> bool:
+    def update(daemonId: str, uuid: str, config: SchedulePostBody) -> bool:
         """
         更新计划任务
 
+        :param daemonId: 节点ID
+        :param uuid: 实例ID
         :param config: 计划任务配置
 
         :returns: 是否成功
@@ -66,5 +71,6 @@ class Schedule:
         return send(
             "POST",
             f"{ApiPool.SCHEDULE}",
+            params={"daemonId": daemonId, "uuid": uuid},
             data=config.model_dump(),
         )

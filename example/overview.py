@@ -19,12 +19,14 @@ for remote in remotes:
     print(remote.ip)
     print(remote.port)
     print(remote.prefix)
-    print(remote.available)
-    print(remote.version)
-    print(remote.process.cpu)
-    print(remote.system.freemem)
-    print(remote.system.hostname)
-    print(remote.system.loadavg)
+    if ava := remote.available:
+        print(remote.version)
+        print(remote.process.cpu) # type: ignore
+        print(remote.system.freemem) # type: ignore
+        print(remote.system.hostname) # type: ignore
+        print(remote.system.loadavg) # type: ignore
+    else:
+        print("Not available")
 
 
 remote = remotes[0]

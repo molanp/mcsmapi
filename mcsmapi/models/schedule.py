@@ -42,7 +42,6 @@ class ScheduleAction(BaseModel):
 class SchedulePostBody(BaseModel):
     """计划任务配置参数"""
 
-    """实例uuid"""
     name: str
     """计划任务名称"""
     count: int
@@ -78,4 +77,4 @@ class ScheduleDetail(SchedulePostBody):
         """
         from mcsmapi.apis.schedule import Schedule
 
-        return Schedule.update(config)
+        return Schedule.update(self.daemonId, self.instanceUuid, config)
