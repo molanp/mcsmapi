@@ -18,6 +18,7 @@ export const zhSidebar: DefaultTheme.Sidebar = {
         { text: "镜像", link: "/endpoints/image" },
         { text: "文件", link: "/endpoints/file" },
         { text: "节点", link: "/endpoints/daemon" },
+        { text: "计划任务", link: "/endpoints/schedule" },
       ],
     },
     {
@@ -31,6 +32,7 @@ export const zhSidebar: DefaultTheme.Sidebar = {
         { text: "文件模型", link: "/models/file" },
         { text: "节点模型", link: "/models/daemon" },
         { text: "通用模型", link: "/models/common" },
+        { text: "计划任务模型", link: "/models/schedule" },
       ],
     },
   ],

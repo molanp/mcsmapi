@@ -1,4 +1,4 @@
-# Common Models
+# Common Model
 
 ## _class_ `CpuMemChart(BaseModel)`
 

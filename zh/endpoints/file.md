@@ -5,7 +5,7 @@
 获取操作文件的子类
 
 ```py
-api = mcsm.file()
+api = mcsm.file
 ```
 
 ---
@@ -89,7 +89,7 @@ api = mcsm.file()
 
 - `bool`: 操作成功后返回 True
 
-### _method_ `copy(daemonId: str, uuid: str, copy_map: dict[str, str])`
+### _method_ `copy_to(daemonId: str, uuid: str, copy_map: dict[str, str])`
 
 移动多个文件或文件夹到指定位置
 

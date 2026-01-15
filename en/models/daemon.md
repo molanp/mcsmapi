@@ -1,4 +1,4 @@
-# Node Models
+# Node Model
 
 ## _class_ `SystemInfo(BaseModel)`
 
@@ -20,30 +20,31 @@ Node system information
 
 ## _class_ `DaemonSetting(BaseModel)`
 
-Node system configuration information
+Node System Configuration Information
 
-| Field                | Type | Description                                                   |
-| -------------------- | ---- | ------------------------------------------------------------- |
-| `language`           | str  | Node language                                                 |
-| `uploadSpeedRate`    | int  | Upload speed limit (0 for no limit, limit is (n \* 64)KB/s)   |
-| `downloadSpeedRate`  | int  | Download speed limit (0 for no limit, limit is (n \* 64)KB/s) |
-| `portRangeStart`     | int  | Start of port range                                           |
-| `portRangeEnd`       | int  | End of port range                                             |
-| `portAssignInterval` | int  | Unknown                                                       |
-| `port`               | int  | Node listening port                                           |
+| Field Name                    | Type | Description                                                  |
+| ----------------------------- | ---- | ------------------------------------------------------------ |
+| `language`                    | str  | Node language                                                |
+| `uploadSpeedRate`             | int  | Upload speed limit (0 = no limit, limit is (n \* 64)KB/s)    |
+| `downloadSpeedRate`           | int  | Download speed limit (0 = no limit, limit is (n \* 64) KB/s) |
+| `portRangeStart`              | int  | Port range start value                                       |
+| `portRangeEnd`                | int  | Port range end value                                         |
+| `portAssignInterval`          | int  | Unknown                                                      |
+| `port`                        | int  | Node listening port                                          |
+| `maxDownloadFromUrlFileCount` | int  | Maximum number of concurrent remote download tasks allowed   |
 
-## _class_ `DaemonSystemInfo(BaseModel)`
+## _class_ `DaemonSystemInfo(DaemonStatus)`
 
-Node system information
+Node Information
 
-| Field         | Type                             | Description                     |
-| ------------- | -------------------------------- | ------------------------------- |
-| `version`     | str \| None = None               | Remote node version             |
-| `process`     | ProcessInfo \| None = None       | Remote node basic information   |
-| `instance`    | InstanceStat \| None = None      | Remote node instance basic info |
-| `system`      | SystemInfo \| None = None        | Remote node system information  |
-| `cpuMemChart` | list[CpuMemChart] \| None = None | CPU and memory usage trend      |
-| `config`      | DaemonSetting                    | Node system configuration       |
+| Field Name    | Type                             | Description                    |
+| ------------- | -------------------------------- | ------------------------------ |
+| `version`     | str \| None = None               | Node version                   |
+| `process`     | ProcessInfo \| None = None       | Node process info              |
+| `instance`    | InstanceStat \| None = None      | Node instance stats            |
+| `system`      | SystemInfo \| None = None        | Node system information        |
+| `cpuMemChart` | list[CpuMemChart] \| None = None | CPU and memory usage trends    |
+| `config`      | DaemonSetting \| None = None     | Node configuration information |
 
 ## _class_ `DaemonOperation(BaseModel)`
 

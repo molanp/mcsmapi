@@ -5,7 +5,7 @@
 Get subclasses of the operation instance.
 
 ```py
-api = mcsm.instance()
+api = mcsm.instance
 ```
 
 ---

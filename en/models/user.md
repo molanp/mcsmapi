@@ -1,4 +1,4 @@
-# User Models
+# User Model
 
 ## _class_ `UserPermission(IntEnum)`
 

@@ -5,7 +5,7 @@
 Get subclasses for operating users.
 
 ```python
-api = mcsm.user()
+api = mcsm.user
 ```
 
 ---

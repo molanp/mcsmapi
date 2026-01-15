@@ -1,8 +1,8 @@
 import { DefaultTheme } from "vitepress";
-export const enSidebar: DefaultTheme.Sidebar = {
+export const zhSidebar: DefaultTheme.Sidebar = {
   "/": [
     {
-      text: "Guide",
+      text: "User Guide",
       collapsed: false,
       items: [
         { text: "Quick Start", link: `/en/quick-started` },
@@ -10,27 +10,29 @@ export const enSidebar: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: "APIs",
+      text: "Endpoints",
       items: [
-        { text: "Dashboard", link: "/en/endpoints/overview" },
-        { text: "User", link: "/en/endpoints/user" },
-        { text: "Instance", link: "/en/endpoints/instance" },
-        { text: "Image", link: "/en/endpoints/image" },
-        { text: "File", link: "/en/endpoints/file" },
-        { text: "Node", link: "/en/endpoints/daemon" },
+        { text: "Dashboard Data", link: "/en/endpoints/overview" },
+        { text: "Users", link: "/en/endpoints/user" },
+        { text: "Instances", link: "/en/endpoints/instance" },
+        { text: "Images", link: "/en/endpoints/image" },
+        { text: "Files", link: "/en/endpoints/file" },
+        { text: "Daemons", link: "/en/endpoints/daemon" },
+        { text: "Scheduled Tasks", link: "/en/endpoints/schedule" },
       ],
     },
     {
       text: "Models",
       collapsed: true,
       items: [
-        { text: "Dashboard Models", link: "/en/models/overview" },
-        { text: "User Models", link: "/en/models/user" },
-        { text: "Instance Models", link: "/en/models/instance" },
-        { text: "Image Models", link: "/en/models/image" },
-        { text: "File Models", link: "/en/models/file" },
-        { text: "Node Models", link: "/en/models/daemon" },
-        { text: "Common Models", link: "/en/models/common" },
+        { text: "Dashboard Model", link: "/en/models/overview" },
+        { text: "User Model", link: "/en/models/user" },
+        { text: "Instance Model", link: "/en/models/instance" },
+        { text: "Image Model", link: "/en/models/image" },
+        { text: "File Model", link: "/en/models/file" },
+        { text: "Node Model", link: "/en/models/daemon" },
+        { text: "Common Model", link: "/en/models/common" },
+        { text: "Scheduled Task Model", link: "/en/models/schedule" },
       ],
     },
   ],

@@ -5,7 +5,7 @@
 获取操作仪表盘数据的子类
 
 ```py
-api = mcsm.overview()
+api = mcsm.overview
 ```
 
 ---

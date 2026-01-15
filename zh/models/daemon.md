@@ -22,28 +22,29 @@
 
 节点系统配置信息
 
-| 字段名               | 类型 | 描述                                          |
-| -------------------- | ---- | --------------------------------------------- |
-| `language`           | str  | 节点语言                                      |
-| `uploadSpeedRate`    | int  | 上传速度限制(0 为不限制, 限制为(n \* 64)KB/s) |
-| `downloadSpeedRate`  | int  | 下载速度限制(0 为不限制, 限制为(n \* 64)KB/s) |
-| `portRangeStart`     | int  | 端口范围起始值                                |
-| `portRangeEnd`       | int  | 端口范围结束值                                |
-| `portAssignInterval` | int  | 未知                                          |
-| `port`               | int  | 节点监听端口                                  |
+| 字段名                        | 类型 | 描述                                          |
+| ----------------------------- | ---- | --------------------------------------------- |
+| `language`                    | str  | 节点语言                                      |
+| `uploadSpeedRate`             | int  | 上传速度限制(0 为不限制, 限制为(n \* 64)KB/s) |
+| `downloadSpeedRate`           | int  | 下载速度限制(0 为不限制, 限制为(n \* 64)KB/s) |
+| `portRangeStart`              | int  | 端口范围起始值                                |
+| `portRangeEnd`                | int  | 端口范围结束值                                |
+| `portAssignInterval`          | int  | 未知                                          |
+| `port`                        | int  | 节点监听端口                                  |
+| `maxDownloadFromUrlFileCount` | int  | 允许同时下载的远程下载任务数量                |
 
-## _class_ `DaemonSystemInfo(BaseModel)`
+## _class_ `DaemonSystemInfo(DaemonStatus)`
 
-节点系统信息
+节点信息
 
-| 字段名        | 类型                             | 描述                 |
-| ------------- | -------------------------------- | -------------------- |
-| `version`     | str \| None = None               | 远程节点版本         |
-| `process`     | ProcessInfo \| None = None       | 远程节点的基本信息   |
-| `instance`    | InstanceStat \| None = None      | 远程节点实例基本信息 |
-| `system`      | SystemInfo \| None = None        | 远程节点系统信息     |
-| `cpuMemChart` | list[CpuMemChart] \| None = None | cpu 和内存使用趋势   |
-| `config`      | DaemonSetting                    | 节点系统配置信息     |
+| 字段名        | 类型                             | 描述               |
+| ------------- | -------------------------------- | ------------------ |
+| `version`     | str \| None = None               | 节点版本           |
+| `process`     | ProcessInfo \| None = None       | 节点进程信息       |
+| `instance`    | InstanceStat \| None = None      | 节点实例统计信息   |
+| `system`      | SystemInfo \| None = None        | 节点系统信息       |
+| `cpuMemChart` | list[CpuMemChart] \| None = None | cpu 和内存使用趋势 |
+| `config`      | DaemonSetting \| None = None     | 节点配置信息       |
 
 ## _class_ `DaemonOperation(BaseModel)`
 
@@ -123,10 +124,10 @@
 
 | 字段名      | 类型 | 描述               |
 | ----------- | ---- | ------------------ |
-| `ip`        | str  | 远程节点的 ip      |
-| `port`      | int  | 远程节点的端口     |
-| `prefix`    | str  | 远程节点的路径前缀 |
-| `remarks`   | str  | 远程节点的备注     |
+| `ip`        | str  | 节点的 ip      |
+| `port`      | int  | 节点的端口     |
+| `prefix`    | str  | 节点的路径前缀 |
+| `remarks`   | str  | 节点的备注     |
 | `available` | bool | 节点可用状态       |
 
 ## _class_ `DaemonInfo(DaemonStatus)`

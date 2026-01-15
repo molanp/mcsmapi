@@ -5,7 +5,7 @@
 Obtain the subclass for node operations
 
 ```py
-api = mcsm.daemon()
+api = mcsm.daemon
 ```
 
 ---
@@ -34,13 +34,13 @@ Get system information for all nodes
 
 - `list[DaemonSystemInfo]`: List of node system information
 
-### _method_ `add(config: dict[str, Any])`
+### _method_ `add(config: DaemonConfig)`
 
 Add a new node
 
 #### Parameters
 
-- `config`: Node configuration provided as a dictionary, missing fields will be supplemented by the `DaemonConfig` model
+- `config`: Node configuration information
 
 #### Returns
 

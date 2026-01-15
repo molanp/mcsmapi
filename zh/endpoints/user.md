@@ -5,7 +5,7 @@
 获取操作用户的子类
 
 ```py
-api = mcsm.user()
+api = mcsm.user
 ```
 
 ---

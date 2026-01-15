@@ -1,4 +1,4 @@
-# Dashboard Models
+# Dashboard Model
 
 ## _class_ `SystemUser(BaseModel)`
 

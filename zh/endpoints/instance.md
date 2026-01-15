@@ -5,7 +5,7 @@
 获取操作实例的子类
 
 ```py
-api = mcsm.instance()
+api = mcsm.instance
 ```
 
 ---

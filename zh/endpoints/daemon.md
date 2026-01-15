@@ -5,7 +5,7 @@
 获取操作节点的子类
 
 ```py
-api = mcsm.daemon()
+api = mcsm.daemon
 ```
 
 ---
@@ -34,13 +34,13 @@ api = mcsm.daemon()
 
 - `list[DaemonSystemInfo]`: 节点的系统信息列表
 
-### _method_ `add(config: dict[str, Any])`
+### _method_ `add(config: DaemonConfig)`
 
 新增一个节点
 
 #### 参数
 
-- `config`: 节点的配置信息，以字典形式提供，缺失内容由 `DaemonConfig` 模型补全
+- `config`: 节点的配置信息
 
 #### 返回
 

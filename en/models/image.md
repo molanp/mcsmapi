@@ -1,4 +1,4 @@
-# Image Models
+# Image Model
 
 ::: tip
 For detailed definitions, refer to:

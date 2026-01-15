@@ -224,6 +224,26 @@
 
 - `FileList`: 文件列表
 
+### _method_ `list_schedule(self)`
+
+获取实例的计划任务列表
+
+#### 返回
+
+- `list[ScheduleDetail]`: 计划任务列表
+
+### _method_ `create_schedule(self, config: SchedulePostBody)`
+
+创建计划任务
+
+#### 参数
+
+- `config`: 计划任务配置
+
+#### 返回
+
+- `bool`: 是否成功
+
 ## _class_ `InstanceCreateResult(BaseModel)`
 
 实例创建结果

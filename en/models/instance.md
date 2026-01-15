@@ -224,6 +224,26 @@ Get the list of instance files.
 
 - `FileList`: List of files.
 
+### _method_ `list_schedule(self)`
+
+Retrieves the list of scheduled tasks for the instance
+
+#### Returns
+
+- `list[ScheduleDetail]`: List of scheduled tasks
+
+### _method_ `create_schedule(self, config: SchedulePostBody)`
+
+Creates a scheduled task
+
+#### Parameters
+
+- `config`: Scheduled task configuration
+
+#### Returns
+
+- `bool`: Success status
+
 ## _class_ `InstanceCreateResult(BaseModel)`
 
 Instance creation result.

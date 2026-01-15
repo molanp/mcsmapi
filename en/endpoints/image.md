@@ -5,7 +5,7 @@
 Obtain the subclass for image operations
 
 ```py
-api = mcsm.image()
+api = mcsm.image
 ```
 
 ---

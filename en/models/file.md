@@ -1,4 +1,4 @@
-# File Models
+# File Model
 
 ## _class_ `FileType(IntEnum)`
 

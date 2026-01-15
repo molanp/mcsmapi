@@ -40,7 +40,7 @@ Get panel operation logs.
 ### Get system overview information
 
 ```python
-overview = api.overview()
+overview = api.overview
 
 print("Server version:", overview.version)
 print("System memory remaining:", overview.system.freemem)

@@ -5,7 +5,7 @@
 Obtain the subclass for file operations
 
 ```py
-api = mcsm.file()
+api = mcsm.file
 ```
 
 ---
@@ -89,7 +89,7 @@ Upload file
 
 - `bool`: Returns True after successful operation
 
-### _method_ `copy(daemonId: str, uuid: str, copy_map: dict[str, str])`
+### _method_ `copy_to(daemonId: str, uuid: str, copy_map: dict[str, str])`
 
 Copy multiple files or folders to the specified location
 

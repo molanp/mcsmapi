@@ -5,7 +5,7 @@
 获取操作镜像的子类
 
 ```py
-api = mcsm.image()
+api = mcsm.image
 ```
 
 ---
