@@ -68,9 +68,4 @@ class Schedule:
 
         :returns: 是否成功
         """
-        return send(
-            "POST",
-            f"{ApiPool.SCHEDULE}",
-            params={"daemonId": daemonId, "uuid": uuid},
-            data=config.model_dump(),
-        )
+        return Schedule.create(daemonId, uuid, config)

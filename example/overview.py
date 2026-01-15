@@ -19,7 +19,7 @@ for remote in remotes:
     print(remote.ip)
     print(remote.port)
     print(remote.prefix)
-    if ava := remote.available:
+    if remote.available:
         print(remote.version)
         print(remote.process.cpu) # type: ignore
         print(remote.system.freemem) # type: ignore
